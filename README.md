@@ -10,4 +10,4 @@ Depending on the version of python you are using, you can host the files locally
 
 **Python 3:** `python3 -m http.server 8080`
 
-Once the server is running, the site can be accessed by going to (http://localhost:8080)[http://localhost:8080] in your web browser.
+Once the server is running, the site can be accessed by going to http://localhost:8080 in your web browser.
