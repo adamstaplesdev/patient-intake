@@ -9,22 +9,84 @@
                 <legend> Personal Information:</legend>
                 <form>
                     First Name: <br>
-                    <input type = "text", name = "firstname"><br>
+                    <input type = "text" name = "firstname"><br>
                     Last Name: <br>
-                    <input type = "text", name = "lastname"><br>
+                    <input type = "text" name = "lastname"><br>
+                    Email: <br>
+                    <input type = "text" name = "Email"><br>
+                    Phone Number: <br>
+                    <input type = "text" name = "Phone"><br>
                     Date of Birth: <br>
-                    <input type = "text", name = "DOB"><br>
+                    <input type = "text" name = "DOB"><br>
                     Age: <br>
-                    <input type = "text", name = "age"><br>
+                    <input type = "text" name = "age"><br>
+                    Sex: <br>
+                    <input type = "radio" name = "gender" value = "male" checked> Male<br>
+                    <input type = "radio" name = "gender" value = "female"> Female<br>
+
                 </form>
              </fieldset>
-            <fieldset>
+
+             <fieldset>
                 <legend> History:</legend>
                 <form>
-                <h6>When did your symptoms start?</h6>
-                    <textarea name = "symptoms", rows = "10", cols = 30>
-                    </textarea>
 
+                    When did your symptoms start? (Month and Year)<br>
+                    <input type = "month" name = "startofsxs"><br>
+                    Are you right or left handed?<br>
+                    <input type = "radio" name = "handdominance" value = "right" checked> Right<br>
+                    <input type = "radio" name = "handdominance" value = "left"> Left<br>
+                    Are your symptoms <br>
+                    <input type = "checkbox" Name = "sxsworse" value = "sxsworse"> Getting worse
+                    <input type = "checkbox" Name = "sxsimproving" value = "sxsimproving"> Getting Better
+                    <input type = "checkbox" Name = "sxsSame" value = "sxssame"> Staying the Same<br>
+                    Have you had prior treatement for your current symptoms?<br>
+                    <input type = "radio" name = "priortreatment" value = "yes" checked> Yes<br>
+                    <input type = "radio" name = "priortreatment" value = "no"> No<br>
+                    If yes, please describe what treatment you received:
+                    <input type ="text" name = "sxsdescription"><br>
+                    Does anything make your symptoms improve?<br>
+                    <input type ="text" name = "sximprovement"><br>
+                    Check the box if you have had any recent testing <br>
+                    <input type = "checkbox" Name = "MRI" value = "mri"> MRI
+                    <input type = "checkbox" Name = "CT" value = "ct"> CT
+                    <input type = "checkbox" Name = "XR" value = "xr"> X-ray
+                    <input type = "checkbox" Name = "Other" value = "other"> Other<br>
+                    If other, please describe: <input type ="text" name = "imagingdescription"><br>
+                    Have you ever had surgery?<br>
+                    <input type = "radio" name = "priorsurgery" value = "yes" checked> Yes<br>
+                    <input type = "radio" name = "priorsurgery" value = "no"> No<br>
+                    If yes, please describe: <input type ="text" name = "surgerydescription"><br>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Current Complaint</legend>
+                    <form>
+                        What is your pain level<br>
+                        At Worst: <div class "slidecontainer">
+                            <input type = "range" min = "1" max = "10" value = 5 id = "worstpn"><br>
+                        At Best: <div class "slidecontainer">
+                            <input type = "range" min = "1" max = "10" value = 5 id = "bestpn"><br>
+                        Right Now: <div class "slidecontainer">
+                            <input type = "range" min = "1" max = "10" value = 5 id = "currentpn"><br>
+                        Are your symptoms:<br>
+                        <input type = "checkbox" Name = "sxsConstant" value = "constant"> Constant<br>
+                        <input type = "checkbox" Name = "sxsCome and Go" value = "Come and Go"> Come and Go<br>
+                        <input type = "checkbox" Name = "sxsAche" value = "Ache"> Ache<br>
+                        <input type = "checkbox" Name = "sxsSharp" value = "Sharp"> Sharp<br>
+                        <input type = "checkbox" Name = "sxsDull" value = "Dull"> Dull<br>
+                        <input type = "checkbox" Name = "sxsShooting" value = "Shooting"> Shooting<br>
+                        <input type = "checkbox" Name = "sxsBurning" value = "Burning"> Burning<br>
+                        <input type = "checkbox" Name = "sxsnumbtingle" value = "Numbtingle"> Numbness/Tingling<br>
+                        <input type = "checkbox" Name = "sxsSuperficial" value = "Superficial"> Superficial<br>
+                        <input type = "checkbox" Name = "sxsDeep" value = "Deep"> Deep<br>
+                        <input type = "checkbox" Name = "sxsOther" value = "Other"> Other<br>
+                        If other, please describe:<input type ="text" name = "sxqualitydescription"><br>
+                        
+                        </div>
+
+                    </form>
                 </fieldset>
                 </form>
                 <input type = "submit", value = "Submit"> 
