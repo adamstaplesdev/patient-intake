@@ -20,31 +20,80 @@
                     <input type = "text" name = "DOB"><br>
                     Age: <br>
                     <input type = "text" name = "age"><br>
+                    Height: <br>
+                    <input type = "text" name = "height"><br>
+                    Weight: <br>
+                    <input type = "text" name = "weight"><br>
                     Sex: <br>
                     <input type = "radio" name = "gender" value = "male"> Male<br>
                     <input type = "radio" name = "gender" value = "female"> Female<br>
+                    Do you currently have insurance? <br>
+                    <input type = "text" name = "insurancestatus"><br>
 
                 </form>
-             </fieldset>
+            </fieldset>
+
+            <fieldset>
+                <legend>Occupation Status:</legend>
+                <form>
+                    Check your current occupational status<br>
+                    Full Time<input type = "checkbox" Name = "fulltime" value = "fulltime">
+                    Part-Time<input type = "checkbox" Name = "parttime" value = "parttime">
+                    Student<input type = "checkbox" Name = "student" value = "student">
+                    Retired<input type = "checkbox" Name = "retired" value = "retired">
+                    Not employed<input type = "checkbox" Name = "notemployed" value = "notemployed"><br>
+                    Occupation:<br>
+                    <input type = "text" name = "occupation"><br>
+                    Occupation Requirements:(check all that apply)<br>
+                    Repetitive Motions<input type = "checkbox" Name = "repetitivemotion" value = "repetitivemotion"> 
+                    Walking<input type = "checkbox" Name = "walking" value = "walking"> 
+                    Lifting<input type = "checkbox" Name = "lifting" value = "lifting">
+                    Kneeling <input type = "checkbox" Name = "kneeling" value = "kneeling">
+                    Sitting<input type = "checkbox" Name = "sitting" value = "sitting"> 
+                    Standing<input type = "checkbox" Name = "standing" value = "standing">
+                    Carrying<input type = "checkbox" Name = "carrying" value = "carrying">
+                    Other<input type = "checkbox" Name = "other" value = "other"><br>
+                    If other, please explain:
+                    <input type = "text" Name = occupationreq><br>
+                </form>
+            </fieldset>
 
              <fieldset>
-                <legend> History:</legend>
+                <legend> Symptoms/Pain:</legend>
                 <form>
-
+                    Why do you seek physical therapy?<br>
+                    <input type= "text" name = "reasonforPT"><br>
                     When did your symptoms start? (Month and Year)<br>
                     <input type = "month" name = "startofsxs"><br>
-                    Are you right or left handed?<br>
-                    <input type = "radio" name = "handdominance" value = "right"> Right<br>
-                    <input type = "radio" name = "handdominance" value = "left"> Left<br>
+                    Was there an injury?<br>
+                    <input type = "radio" name = "injuryyes" value = "injuryyes"> Yes<br>
+                    <input type = "radio" name = "injuryno" value = "injuryno"> No<br>
+                    Were you referred to physical therapy?<br>
+                    <input type = "radio" name = "referredyes" value = "referredyes"> Yes<br>
+                    <input type = "radio" name = "referredno" value = "referredno"> No<br>
+                    If yes, who referred you to physical therapy?<br>
+                    <input type = "text" name = "referralsource"><br>
+                    Have you had prior treatement for your current symptoms?<br>
+                    <input type = "radio" name = "priortreatment" value = "yes"> Yes<br>
+                    <input type = "radio" name = "priortreatment" value = "no"> No<br>
+                    If yes, when was your last visit?<br>
+                    <input type = "month" name = "lastprovidervisit"><br>
                     Are your symptoms <br>
                     <input type = "checkbox" Name = "sxsworse" value = "sxsworse"> Getting worse
                     <input type = "checkbox" Name = "sxsimproving" value = "sxsimproving"> Getting Better
                     <input type = "checkbox" Name = "sxsSame" value = "sxssame"> Staying the Same<br>
-                    Have you had prior treatement for your current symptoms?<br>
-                    <input type = "radio" name = "priortreatment" value = "yes"> Yes<br>
-                    <input type = "radio" name = "priortreatment" value = "no"> No<br>
-                    If yes, please describe what treatment you received:
-                    <input type ="text" name = "sxsdescription"><br>
+                    Which activities are limited by your symptoms?<br>
+                    Standing<input type = "checkbox" Name = "standinglimit" value = "standinglimit"> 
+                    Walking<input type = "checkbox" Name = "walkinglimit" value = "walkinglimit"> 
+                    Working<input type = "checkbox" Name = "worklimit" value = "worklimit">
+                    Sleeping <input type = "checkbox" Name = "sleepinglimit" value = "sleepinglimit">
+                    Lifting<input type = "checkbox" Name = "liftinglimit" value = "liftinglimit"> 
+                    Sitting<input type = "checkbox" Name = "sittinglimit" value = "sittinglimit">
+                    Exercise<input type = "checkbox" Name = "exerciselimit" value = "exerciselimit">
+                    Housework<input type = "checkbox" Name = "houseworklimit" value = "houseworklimit">
+                    Other<input type = "checkbox" Name = "other" value = "other"><br>
+                    If other, please explain:<br>
+                    <input type = "text" name = "otheractivitylimit"><br>
                     Does anything improve your symptoms?<br>
                     <input type ="text" name = "sximprovement"><br>
                     Check the box if you have had any recent testing <br>
@@ -53,6 +102,18 @@
                     <input type = "checkbox" Name = "XR" value = "xr"> X-ray
                     <input type = "checkbox" Name = "Other" value = "other"> Other<br>
                     If other, please describe: <input type ="text" name = "imagingdescription"><br>
+                    What are your primary complaints?<br>
+                        <input type = "checkbox" Name = "sxsstiffness" value = "stiffness"> Stiffness<br>
+                        <input type = "checkbox" Name = "sxsspasm" value = "spasm"> Muscle Spasm<br>
+                        <input type = "checkbox" Name = "sxsinstability" value = "instability"> Instability<br>
+                        <input type = "checkbox" Name = "sxsweakness" value = "weakness"> Weakness<br>
+                        <input type = "checkbox" Name = "sxsnumbness" value = "Numbness"> Numbness<br>
+                        <input type = "checkbox" Name = "sxsSwelling" value = "Swelling"> Swelling<br>
+                        <input type = "checkbox" Name = "sxsPain" value = "Pain"> Pain<br>
+                        <input type = "checkbox" Name = "sxspoorbalance" value = "Poorbalance"> Poor Balance<br>
+                        <input type = "checkbox" Name = "sxsOther" value = "Other"> Other<br>
+                        If other, please explain:<input type ="text" name = "sxqualitydescription"><br>
+
                     Have you ever had surgery?<br>
                     <input type = "radio" name = "priorsurgery" value = "yes"> Yes<br>
                     <input type = "radio" name = "priorsurgery" value = "no"> No<br>
@@ -71,19 +132,8 @@
                         Right Now: <div class "slidecontainer">
                             <input type = "range" min = "1" max = "10" value = 5 id = "currentpn"><br>
                         </div>
-                        Describe your symptoms:(May Check Multiple) <br>
-                        <input type = "checkbox" Name = "sxsConstant" value = "constant"> Constant<br>
-                        <input type = "checkbox" Name = "sxsComeandGo" value = "ComeandGo"> Come and Go<br>
-                        <input type = "checkbox" Name = "sxsAche" value = "Ache"> Ache<br>
-                        <input type = "checkbox" Name = "sxsSharp" value = "Sharp"> Sharp<br>
-                        <input type = "checkbox" Name = "sxsDull" value = "Dull"> Dull<br>
-                        <input type = "checkbox" Name = "sxsShooting" value = "Shooting"> Shooting<br>
-                        <input type = "checkbox" Name = "sxsBurning" value = "Burning"> Burning<br>
-                        <input type = "checkbox" Name = "sxsnumbtingle" value = "Numbtingle"> Numbness/Tingling<br>
-                        <input type = "checkbox" Name = "sxsSuperficial" value = "Superficial"> Superficial<br>
-                        <input type = "checkbox" Name = "sxsDeep" value = "Deep"> Deep<br>
-                        <input type = "checkbox" Name = "sxsOther" value = "Other"> Other<br>
-                        If other, please explain:<input type ="text" name = "sxqualitydescription"><br>
+                        
+                        
                         
                         Please mark the location of your sxs:<br>
                         <img src = "BodyChart.jpg" alt = "Body Chart" usemap = "BodyChart">
@@ -104,11 +154,81 @@
                           Other <input type = "checkbox" Name = "worseother" value = "worseother"><br>
                           If other, explain:
                           <input type = "sxstimeofday" name = "sxstimeofday"><br>
-                                     
-
+                          What words best describe your pain?<br>
+                          <input type = "checkbox" Name = "sxsSharp" value = "Sharp"> Sharp<br>
+                          <input type = "checkbox" Name = "sxsThrobbing" value = "Throbbing"> Throbbing<br>
+                          <input type = "checkbox" Name = "sxsaching" value = "aching"> Aching<br>
+                          <input type = "checkbox" Name = "sxsburning" value = "Burning"> Burning<br>
+                          <input type = "checkbox" Name = "sxsDeep" value = "Deep"> Deep<br>
+                          <input type = "checkbox" Name = "sxsStinging" value = "Stinging"> Stinging<br>
+                          <input type = "checkbox" Name = "sxsConstant" value = "Constant"> Constant<br>
+                          <input type = "checkbox" Name = "sxsComeandGo" value = "ComeandGo"> Comes and Goes<br>
+                          <input type = "checkbox" Name = "sxsOther" value = "Other"> Other<br>
+                          If other, please explain:<input type ="text" name = "pnqualitydescription"><br>
+                
                     </form>
                 </fieldset>
-                </form>
+
+                <fieldset>
+                    <legend>Medical/Surgical History:</legend>
+                    <h6>(Check if you have the following conditions)</h6>
+                    <form>
+                        Cardipulmonary:<br>
+                        <input type = "checkbox" Name = "hypertension" value = "hypertension"> High Blood Pressure<br>
+                        <input type = "checkbox" Name = "heartdisease" value = "heartdisease"> Heart Disease<br>
+                        <input type = "checkbox" Name = "Smoking" value = "Smoking"> Smoking -
+                        How many packs/day? 
+                        <select>
+                            <option value="lessthan1"><1</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6+">6+</option>
+                              </select><br>
+                         <input type = "checkbox" Name = "strokehx" value = "strokehx"> History of Stroke?<br>
+                         <input type = "checkbox" Name = "highcholesterol" value = "highcholesterol"> High Cholesterol<br>
+                         <input type = "checkbox" Name = "Anemia" value = "Anemia"> Anemia<br>
+                         <input type = "checkbox" Name = "bleedingdisorder" value = "bleedingdisorder"> Bleeding Disorder<br>
+                         <input type = "checkbox" Name = "noCVD" value = "noCVD"> None<br>
+                        
+                         Neuromuscular/Musculoskeletal:<br>
+                         <input type = "checkbox" Name = "headaches" value = "headaches"> Severe Headaches<br>
+                         <input type = "checkbox" Name = "cervicalspinedisorder" value = "Cervicalspinedisorder"> Cervical Spine Disorder<br>
+                         <input type = "checkbox" Name = "lspinedisorder" value = "Lspinedisorder"> Lumbar Spine Disorder<br>
+                         <input type = "checkbox" Name = "osteoporosis" value = "osteoporosis"> Osteoporosis<br>
+                         <input type = "checkbox" Name = "pregnant" value = "pregnant"> Pregnant - 
+                         # of weeks? <input type = "text" name = "weekspregnant"><br>
+                         <input type = "checkbox" Name = "fractures" value = "fractures"> Fracture<br>
+                         <input type = "checkbox" Name = "nerveinjury" value = "nerveinjury"> Nerve injury<br>
+                         
+                         Endocrine/Other:<br>
+                         <input type = "checkbox" Name = "diabetes" value = "diabetes"> Diabetes<br>
+                         <input type = "checkbox" Name = "Alcohol/drugs" value = "alcohol/drugs"> Alcohol or drug abuse<br>
+                         <input type = "checkbox" Name = "depression" value = "depression"> Depression<br>
+                         <input type = "checkbox" Name = "kidneydisease" value = "kidneydisease"> Kidney Disease<br>
+                         <input type = "checkbox" Name = "thyroiddisease" value = "thyroiddisease"> Thyroid Disease<br>
+                         <input type = "checkbox" Name = "stomach/bowel" value = "stomach/bowel"> Stomach/Bowel Disease<br>
+                         <input type = "checkbox" Name = "mentalhealth" value = "mentalhealth"> Mental Health<br>
+
+                         Medications: (list all)
+                         <input type ="text" name = "medications"><br>
+                         Medication Allergies:
+                         <input type ="text" name = "medicationallergies"><br>
+                         What would you like to accomplish with physical therapy?
+                         <input type ="text" name = "PTgoals"><br>
+                         How do you prefer to get physical therapy information?<br>
+                         <input type = "checkbox" Name = "written" value = "Written"> Written<br>
+                         <input type = "checkbox" Name = "Verbal" value = "Verbal"> Verbal<br>
+                         <input type = "checkbox" Name = "Demonstration" value = "Demonstration"> Demonstration<br>  
+                         Additional Comments: 
+                         <input type ="text" name = "Comments"><br> 
+                                                                   
+
+
+                    </form>
+
                 <input type = "submit", value = "Submit"> 
         </p>
     </body>
