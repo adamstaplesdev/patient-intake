@@ -1,136 +1,148 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>English Intake Form</title>
-        <!--<script type="text/javascript" src = "scripts/signature.js"></script>-->
+        <!--<src = "scripts/signature.js"></script>-->
+       <!--## Validation for radio or text functions, may include many options by referencing ID and using or (||) or and (&&)
+           <script type="text/javascript"> 
+        function validate(){
+            var radio = document.getElementById('fulltime').checked;
+            var radio2 = document.getElementById('parttime').checked;
+            if((fulltime=="") && (parttime =="")){
+                alert('Please check at least one option.');
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>-->
+    <!--validation of text can be as simple as used below in first name adding required to the end <input type = "text" name="firstname" required>-->
+
     </head>
     <body onload="init()">
         <h1>English Patient Intake Form</h1>
         <p>
+            
             <fieldset>
+                <form name=english-intake onsubmit="return validate()" action= "Liability-Waver.html" method = "post">
                 <legend> Personal Information:</legend>
-                <form>
-                    First Name: <br>
-                    <input type = "text" name = "firstname"><br>
-                    Last Name: <br>
-                    <input type = "text" name = "lastname"><br>
-                    Email: <br>
-                    <input type = "text" name = "Email"><br>
-                    Phone Number: <br>
-                    <input type = "text" name = "Phone"><br>
-                    Date of Birth: <br>
-                    <input type = "text" name = "DOB"><br>
-                    Age: <br>
-                    <input type = "text" name = "age"><br>
-                    Height: <br>
-                    <input type = "text" name = "height"><br>
-                    Weight: <br>
-                    <input type = "text" name = "weight"><br>
-                    Sex: <br>
+                    First Name:
+                    <input type = "text" name = "firstname" required><br>
+                    Last Name:
+                    <input type = "text" name = "lastname" required><br>
+                    Email:
+                    <input type = "text" name = "Email" required><br>
+                    Phone Number:
+                    <input type = "text" name = "Phone" required><br>
+                    Date of Birth:
+                    <input type = "text" name = "DOB" required><br>
+                    Age:
+                    <input type = "text" name = "age" required><br>
+                    Height:
+                    <input type = "text" name = "height" required><br>
+                    Weight:
+                    <input type = "text" name = "weight" required><br>
+                    Gender:
                     <input type = "radio" name = "gender" value = "male"> Male<br>
                     <input type = "radio" name = "gender" value = "female"> Female<br>
-                    Do you currently have insurance? <br>
-                    <input type = "text" name = "insurancestatus"><br>
-
-                </form>
+                    Do you currently have insurance?:
+                    <input type = "text" name = "insurancestatus" required><br>
             </fieldset>
 
             <fieldset>
-                <legend>Occupation Status:</legend>
-                <form>
+                <legend>Occupation Status</legend>
                     Check your current occupational status<br>
-                    Full Time<input type = "checkbox" Name = "fulltime" value = "fulltime">
-                    Part-Time<input type = "checkbox" Name = "parttime" value = "parttime">
-                    Student<input type = "checkbox" Name = "student" value = "student">
-                    Retired<input type = "checkbox" Name = "retired" value = "retired">
-                    Not employed<input type = "checkbox" Name = "notemployed" value = "notemployed"><br>
+                    Full Time<input type = "radio" Name = "occupationstatus" value = "fulltime">
+                    Part-Time<input type = "radio" Name = "occupationstatus" value = "parttime">
+                    Student<input type = "radio" Name = "occupationstatus" value = "student" >
+                    Retired<input type = "radio" Name = "occupationstatus" value = "retired">
+                    Not employed<input type = "radio" Name = "occupationstatus" value = "notemployed"><br>
                     Occupation:<br>
                     <input type = "text" name = "occupation"><br>
                     Occupation Requirements:(check all that apply)<br>
-                    Repetitive Motions<input type = "checkbox" Name = "repetitivemotion" value = "repetitivemotion"> 
-                    Walking<input type = "checkbox" Name = "walking" value = "walking"> 
-                    Lifting<input type = "checkbox" Name = "lifting" value = "lifting">
-                    Kneeling <input type = "checkbox" Name = "kneeling" value = "kneeling">
-                    Sitting<input type = "checkbox" Name = "sitting" value = "sitting"> 
-                    Standing<input type = "checkbox" Name = "standing" value = "standing">
-                    Carrying<input type = "checkbox" Name = "carrying" value = "carrying">
-                    Other<input type = "checkbox" Name = "other" value = "other"><br>
+                    Repetitive Motions<input type = "radio" Name = "occupationrequirements" value = "repetitivemotion"> 
+                    Walking<input type = "radio" Name = "occupationrequirements" value = "walking"> 
+                    Lifting<input type = "radio" Name = "occupationrequirements" value = "lifting">
+                    Kneeling <input type = "radio" Name = "occupationrequirements" value = "kneeling">
+                    Sitting<input type = "radio" Name = "occupationrequirements" value = "sitting"> 
+                    Standing<input type = "radio" Name = "occupationrequirements" value = "standing">
+                    Carrying<input type = "radio" Name = "occupationrequirements" value = "carrying">
+                    Other<input type = "radio" Name = "occupationrequirements" value = "other"><br>
                     If other, please explain:
-                    <input type = "text" Name = occupationreq><br>
-                </form>
+                    <input type = "text" Name = occupationrequirementstext><br>
             </fieldset>
 
              <fieldset>
                 <legend> Symptoms/Pain:</legend>
-                <form>
+        
                     Why do you seek physical therapy?<br>
-                    <input type= "text" name = "reasonforPT"><br>
+                    <input type= "text" name = "reasonforPT" required><br>
                     When did your symptoms start? (Month and Year)<br>
-                    <input type = "month" name = "startofsxs"><br>
+                    <input type = "month" name = "startofsxs"required><br>
                     Was there an injury?<br>
-                    <input type = "radio" name = "injuryyes" value = "injuryyes"> Yes<br>
-                    <input type = "radio" name = "injuryno" value = "injuryno"> No<br>
+                    <input type = "radio" name = "injury" value = "injuryyes" > Yes<br>
+                    <input type = "radio" name = "injury" value = "injuryno" > No<br>
                     Were you referred to physical therapy?<br>
-                    <input type = "radio" name = "referredyes" value = "referredyes"> Yes<br>
-                    <input type = "radio" name = "referredno" value = "referredno"> No<br>
+                    <input type = "radio" name = "referred" value = "referredyes"> Yes<br>
+                    <input type = "radio" name = "referred" value = "referredno"> No<br>
                     If yes, who referred you to physical therapy?<br>
-                    <input type = "text" name = "referralsource"><br>
+                    <input type = "text" name = "referralsourcetext" ><br>
                     Have you had prior treatement for your current symptoms?<br>
                     <input type = "radio" name = "priortreatment" value = "yes"> Yes<br>
                     <input type = "radio" name = "priortreatment" value = "no"> No<br>
                     If yes, when was your last visit?<br>
                     <input type = "month" name = "lastprovidervisit"><br>
                     Are your symptoms <br>
-                    <input type = "checkbox" Name = "sxsworse" value = "sxsworse"> Getting worse
-                    <input type = "checkbox" Name = "sxsimproving" value = "sxsimproving"> Getting Better
-                    <input type = "checkbox" Name = "sxsSame" value = "sxssame"> Staying the Same<br>
+                    <input type = "radio" Name = "symptoms" value = "worse"> Getting worse
+                    <input type = "radio" Name = "symptoms" value = "improving"> Getting Better
+                    <input type = "radio" Name = "symptoms" value = "same"> Staying the Same<br>
                     Which activities are limited by your symptoms?<br>
-                    Standing<input type = "checkbox" Name = "standinglimit" value = "standinglimit"> 
-                    Walking<input type = "checkbox" Name = "walkinglimit" value = "walkinglimit"> 
-                    Working<input type = "checkbox" Name = "worklimit" value = "worklimit">
-                    Sleeping <input type = "checkbox" Name = "sleepinglimit" value = "sleepinglimit">
-                    Lifting<input type = "checkbox" Name = "liftinglimit" value = "liftinglimit"> 
-                    Sitting<input type = "checkbox" Name = "sittinglimit" value = "sittinglimit">
-                    Exercise<input type = "checkbox" Name = "exerciselimit" value = "exerciselimit">
-                    Housework<input type = "checkbox" Name = "houseworklimit" value = "houseworklimit">
-                    Other<input type = "checkbox" Name = "other" value = "other"><br>
+                    Standing<input type = "radio" Name = "activitylimitations" value = "standing"> 
+                    Walking<input type = "radio" Name = "activitylimitations" value = "walking"> 
+                    Working<input type = "radio" Name = "activitylimitations" value = "work">
+                    Sleeping <input type = "radio" Name = "activitylimitations" value = "sleeping">
+                    Lifting<input type = "radio" Name = "activitylimitations" value = "lifting"> 
+                    Sitting<input type = "radio" Name = "activitylimitations" value = "sitting">
+                    Exercise<input type = "radio" Name = "activitylimitations" value = "exercise">
+                    Housework<input type = "radio" Name = "activitylimitations" value = "housework">
+                    Other<input type = "radio" Name = "activitylimitations" value = "other"><br>
                     If other, please explain:<br>
-                    <input type = "text" name = "otheractivitylimit"><br>
+                    <input type = "text" name = "activitylimitations"><br>
                     Does anything improve your symptoms?<br>
                     <input type ="text" name = "sximprovement"><br>
                     Check the box if you have had any recent testing <br>
-                    <input type = "checkbox" Name = "MRI" value = "mri"> MRI
-                    <input type = "checkbox" Name = "CT" value = "ct"> CT
-                    <input type = "checkbox" Name = "XR" value = "xr"> X-ray
-                    <input type = "checkbox" Name = "Other" value = "other"> Other<br>
-                    If other, please describe: <input type ="text" name = "imagingdescription"><br>
+                    <input type = "radio" Name = "Imaging" value = "mri"> MRI
+                    <input type = "radio" Name = "Imaging" value = "ct"> CT
+                    <input type = "radio" Name = "Imaging" value = "xr"> X-ray
+                    <input type = "radio" Name = "Imaging" value = "other"> Other<br>
+                    If other, please describe: <input type ="text" name = "imaging"><br>
                     What are your primary complaints?<br>
-                        <input type = "checkbox" Name = "sxsstiffness" value = "stiffness"> Stiffness<br>
-                        <input type = "checkbox" Name = "sxsspasm" value = "spasm"> Muscle Spasm<br>
-                        <input type = "checkbox" Name = "sxsinstability" value = "instability"> Instability<br>
-                        <input type = "checkbox" Name = "sxsweakness" value = "weakness"> Weakness<br>
-                        <input type = "checkbox" Name = "sxsnumbness" value = "Numbness"> Numbness<br>
-                        <input type = "checkbox" Name = "sxsSwelling" value = "Swelling"> Swelling<br>
-                        <input type = "checkbox" Name = "sxsPain" value = "Pain"> Pain<br>
-                        <input type = "checkbox" Name = "sxspoorbalance" value = "Poorbalance"> Poor Balance<br>
-                        <input type = "checkbox" Name = "sxsOther" value = "Other"> Other<br>
-                        If other, please explain:<input type ="text" name = "sxqualitydescription"><br>
-
+                        <input type = "radio" Name = "Primarycomplaints" value = "stiffness"> Stiffness<br>
+                        <input type = "radio" Name = "Primarycomplaints" value = "spasm"> Muscle Spasm<br>
+                        <input type = "radio" Name = "Primarycomplaints" value = "instability"> Instability<br>
+                        <input type = "radio" Name = "Primarycomplaints" value = "weakness"> Weakness<br>
+                        <input type = "radio" Name = "Primarycomplaints" value = "Numbness"> Numbness<br>
+                        <input type = "radio" Name = "Primarycomplaints" value = "Swelling"> Swelling<br>
+                        <input type = "radio" Name = "Primarycomplaints" value = "Pain"> Pain<br>
+                        <input type = "radio" Name = "Primarycomplaints" value = "Poorbalance"> Poor Balance<br>
+                        <input type = "radio" Name = "Primarycomplaints" value = "Other"> Other<br>
+                        If other, please explain:<input type ="text" name = "Primarycomplaints"><br>
+             
                     Have you ever had surgery?<br>
                     <input type = "radio" name = "priorsurgery" value = "yes"> Yes<br>
                     <input type = "radio" name = "priorsurgery" value = "no"> No<br>
-                    If yes, please describe: <input type ="text" name = "surgerydescription"><br>
-
+                    If yes, please describe: <input type ="text" name = "priorsurgery"><br>
                 </fieldset>
 
                 <fieldset>
                     <legend>Current Complaints:</legend>
-                    <form>
                         What is your pain level<br>
-                        At Worst: <div class "slidecontainer">
+                        At Worst: <div class="slidecontainer">
                             <input type = "range" min = "1" max = "10" value = 5 id = "worstpn"><br>
-                        At Best: <div class "slidecontainer">
+                        At Best: <div class="slidecontainer">
                             <input type = "range" min = "1" max = "10" value = 5 id = "bestpn"><br>
-                        Right Now: <div class "slidecontainer">
+                        Right Now: <div class="slidecontainer">
                             <input type = "range" min = "1" max = "10" value = 5 id = "currentpn"><br>
                         </div>
                         
@@ -144,38 +156,36 @@
                           </map><br>
 
                           Is your pain worse at a certain time of day?
-                          Yes <input type = "checkbox" Name = "timeofdayyes" value = "timeofdayyes">
-                          No <input type = "checkbox" Name = "timeofdayno" value = "timeofdayno"><br>
+                          Yes <input type = "radio" Name = "worsetimeofday" value = "yes">
+                          No <input type = "radio" Name = "worsetimeofday" value = "no"><br>
                           If yes, 
-                          Morning <input type = "checkbox" Name = "worsemorning" value = "worsemorning"> 
-                          Night <input type = "checkbox" Name = "worsenight" value = "worsenight">
-                          As day progresses <input type = "checkbox" Name = "worseasdayprogresses" value = "worseasdayprogresses"> 
-                          Other <input type = "checkbox" Name = "worseother" value = "worseother"><br>
+                          Morning <input type = "radio" Name = "worsttimeofday" value = "morning"> 
+                          Night <input type = "radio" Name = "worsttimeofday" value = "night">
+                          As day progresses <input type = "radio" Name = "worsttimeofday" value = "asdayprogresses"> 
+                          Other <input type = "radio" Name = "worsttimeofday" value = "other"><br>
                           If other, explain:
-                          <input type = "sxstimeofday" name = "sxstimeofday"><br>
+                          <input type = "worsttimeofday" name = "worsttimeofdaytext"><br>
                           What words best describe your pain?<br>
-                          <input type = "checkbox" Name = "sxsSharp" value = "Sharp"> Sharp<br>
-                          <input type = "checkbox" Name = "sxsThrobbing" value = "Throbbing"> Throbbing<br>
-                          <input type = "checkbox" Name = "sxsaching" value = "aching"> Aching<br>
-                          <input type = "checkbox" Name = "sxsburning" value = "Burning"> Burning<br>
-                          <input type = "checkbox" Name = "sxsDeep" value = "Deep"> Deep<br>
-                          <input type = "checkbox" Name = "sxsStinging" value = "Stinging"> Stinging<br>
-                          <input type = "checkbox" Name = "sxsConstant" value = "Constant"> Constant<br>
-                          <input type = "checkbox" Name = "sxsComeandGo" value = "ComeandGo"> Comes and Goes<br>
-                          <input type = "checkbox" Name = "sxsOther" value = "Other"> Other<br>
-                          If other, please explain:<input type ="text" name = "pnqualitydescription"><br>
-                
-                    </form>
+                          <input type = "radio" Name = "sxsdescription" value = "Sharp"> Sharp<br>
+                          <input type = "radio" Name = "sxsdescription" value = "Throbbing"> Throbbing<br>
+                          <input type = "radio" Name = "sxsdescription" value = "aching"> Aching<br>
+                          <input type = "radio" Name = "sxsdescription" value = "Burning"> Burning<br>
+                          <input type = "radio" Name = "sxsdescription" value = "Deep"> Deep<br>
+                          <input type = "radio" Name = "sxsdescription" value = "Stinging"> Stinging<br>
+                          <input type = "radio" Name = "sxsdescription" value = "Constant"> Constant<br>
+                          <input type = "radio" Name = "sxsdescription" value = "ComeandGo"> Comes and Goes<br>
+                          <input type = "radio" Name = "sxsdescription" value = "Other"> Other<br>
+                          If other, please explain:<input type ="text" name = "sxsdescription"><br>
+            
                 </fieldset>
 
                 <fieldset>
                     <legend>Medical/Surgical History:</legend>
                     <h6>(Check if you have the following conditions)</h6>
-                    <form>
                         Cardipulmonary:<br>
-                        <input type = "checkbox" Name = "hypertension" value = "hypertension"> High Blood Pressure<br>
-                        <input type = "checkbox" Name = "heartdisease" value = "heartdisease"> Heart Disease<br>
-                        <input type = "checkbox" Name = "Smoking" value = "Smoking"> Smoking -
+                        <input type = "radio" Name = "hypertension" value = "hypertension"> High Blood Pressure<br>
+                        <input type = "radio" Name = "heartdisease" value = "heartdisease"> Heart Disease<br>
+                        <input type = "radio" Name = "Smoking" value = "Smoking"> Smoking -
                         How many packs/day? 
                         <select>
                             <option value="lessthan1"><1</option>
@@ -186,30 +196,30 @@
                             <option value="5">5</option>
                             <option value="6+">6+</option>
                               </select><br>
-                         <input type = "checkbox" Name = "strokehx" value = "strokehx"> History of Stroke?<br>
-                         <input type = "checkbox" Name = "highcholesterol" value = "highcholesterol"> High Cholesterol<br>
-                         <input type = "checkbox" Name = "Anemia" value = "Anemia"> Anemia<br>
-                         <input type = "checkbox" Name = "bleedingdisorder" value = "bleedingdisorder"> Bleeding Disorder<br>
-                         <input type = "checkbox" Name = "noCVD" value = "noCVD"> None<br>
+                         <input type = "radio" Name = "cardipulmonary" value = "stroke"> History of Stroke?<br>
+                         <input type = "radio" Name = "cardipulmonary" value = "highcholesterol"> High Cholesterol<br>
+                         <input type = "radio" Name = "cardipulmonary" value = "Anemia"> Anemia<br>
+                         <input type = "radio" Name = "cardipulmonary" value = "bleedingdisorder"> Bleeding Disorder<br>
+                         <input type = "radio" Name = "cardipulmonary" value = "noCVD"> None<br>
                         
                          Neuromuscular/Musculoskeletal:<br>
-                         <input type = "checkbox" Name = "headaches" value = "headaches"> Severe Headaches<br>
-                         <input type = "checkbox" Name = "cervicalspinedisorder" value = "Cervicalspinedisorder"> Cervical Spine Disorder<br>
-                         <input type = "checkbox" Name = "lspinedisorder" value = "Lspinedisorder"> Lumbar Spine Disorder<br>
-                         <input type = "checkbox" Name = "osteoporosis" value = "osteoporosis"> Osteoporosis<br>
-                         <input type = "checkbox" Name = "pregnant" value = "pregnant"> Pregnant - 
-                         # of weeks? <input type = "text" name = "weekspregnant"><br>
-                         <input type = "checkbox" Name = "fractures" value = "fractures"> Fracture<br>
-                         <input type = "checkbox" Name = "nerveinjury" value = "nerveinjury"> Nerve injury<br>
+                         <input type = "radio" Name = "NeuroMSK" value = "headaches"> Severe Headaches<br>
+                         <input type = "radio" Name = "NeuroMSK" value = "Cervicalspinedisorder"> Cervical Spine Disorder<br>
+                         <input type = "radio" Name = "NeuroMSK" value = "Lspinedisorder"> Lumbar Spine Disorder<br>
+                         <input type = "radio" Name = "NeuroMSK" value = "osteoporosis"> Osteoporosis<br>
+                         <input type = "radio" Name = "NeuroMSK" value = "pregnant"> Pregnant - 
+                         # of weeks? <input type = "text" name = "NeuroMSKweekspregnant"><br>
+                         <input type = "radio" Name = "NeuroMSK" value = "fractures"> Fracture<br>
+                         <input type = "radio" Name = "NeuroMSK" value = "nerveinjury"> Nerve injury<br>
                          
                          Endocrine/Other:<br>
-                         <input type = "checkbox" Name = "diabetes" value = "diabetes"> Diabetes<br>
-                         <input type = "checkbox" Name = "Alcohol/drugs" value = "alcohol/drugs"> Alcohol or drug abuse<br>
-                         <input type = "checkbox" Name = "depression" value = "depression"> Depression<br>
-                         <input type = "checkbox" Name = "kidneydisease" value = "kidneydisease"> Kidney Disease<br>
-                         <input type = "checkbox" Name = "thyroiddisease" value = "thyroiddisease"> Thyroid Disease<br>
-                         <input type = "checkbox" Name = "stomach/bowel" value = "stomach/bowel"> Stomach/Bowel Disease<br>
-                         <input type = "checkbox" Name = "mentalhealth" value = "mentalhealth"> Mental Health<br>
+                         <input type = "radio" Name = "endocrine" value = "diabetes"> Diabetes<br>
+                         <input type = "radio" Name = "endocrine" value = "alcohol/drugs"> Alcohol or drug abuse<br>
+                         <input type = "radio" Name = "endocrine" value = "depression"> Depression<br>
+                         <input type = "radio" Name = "endocrine" value = "kidneydisease"> Kidney Disease<br>
+                         <input type = "radio" Name = "endocrine" value = "thyroiddisease"> Thyroid Disease<br>
+                         <input type = "radio" Name = "endocrine" value = "stomach/bowel"> Stomach/Bowel Disease<br>
+                         <input type = "radio" Name = "endocrine" value = "mentalhealth"> Mental Health<br>
 
                          Medications: (list all)
                          <input type ="text" name = "medications"><br>
@@ -218,29 +228,29 @@
                          What would you like to accomplish with physical therapy?
                          <input type ="text" name = "PTgoals"><br>
                          How do you prefer to get physical therapy information?<br>
-                         <input type = "checkbox" Name = "written" value = "Written"> Written<br>
-                         <input type = "checkbox" Name = "Verbal" value = "Verbal"> Verbal<br>
-                         <input type = "checkbox" Name = "Demonstration" value = "Demonstration"> Demonstration<br>  
+                         <input type = "radio" Name = "preferedinfoformat" value = "Written"> Written<br>
+                         <input type = "radio" Name = "preferedinfoformat" value = "Verbal"> Verbal<br>
+                         <input type = "radio" Name = "preferedinfoformat" value = "Demonstration"> Demonstration<br>  
                          Additional Comments: 
-                         <input type ="text" name = "Comments"><br> 
-                                                                   
+                         <input type ="text" name = "preferedinfoformatComments"><br> 
+                        <fieldset>
 
-
-                    </form>
-                <fieldset>
-                    <form>
                         <legend>I understand that I have the right to terminate any or all parts of my evaluation at any time and that I am responsible for notifying my evaluator of any and 
                         and all changes in my symptoms as they occur. I acknowledge that all information provided on this evaluation is accurate and completed to the best
                         of my abilities. </legend>
                         <!--Signature box: https://zipso.net/a-simple-touchscreen-sketchpad-using-javascript-and-html5/-->
-                        <!--TODO: very jittery, need to smooth out the signature-->
+                        <!--TODO: very jittery, need to smooth out the signature
+                        
+                        ## Resource https://github.com/szimek/signature_pad/blob/gh-pages/js/app.js-->
+                         
+                        
                         <canvas id="sketchpad" height="200" width="500" style="margin: 0px 0px 0px 0px;  border-style: solid; border-width: 1px; border-color: #bbbbbb #dbdfe6 #e3e9ef #e2e3ea; -webkit-border-radius: 1px; -moz-border-radius: 1px; -o-border-radius: 1px; border-radius: 1px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; background-color: #FFFFFF;">
                         </canvas>
                         <br/>
                         <input type="submit" value="Clear Sketchpad" onclick="clearCanvas(canvas,ctx);">
-                    </form>
                 </fieldset>
-                <input type = "submit", value = "Submit"> 
+                <input type = "submit", value = "GOOOO"> 
+            </form>
         </p>
 
         <script type="text/javascript">
@@ -277,7 +287,7 @@
             // Keep track of the mouse button being pressed and draw a dot at current location
             function sketchpad_mouseDown() {
                 mouseDown=1;
-                drawDot(ctx,mouseX,mouseY,12);
+                drawDot(ctx,mouseX,mouseY,5);
             }
         
             // Keep track of the mouse button being released
@@ -292,7 +302,7 @@
         
                 // Draw a dot if the mouse button is currently being pressed
                 if (mouseDown==1) {
-                    drawDot(ctx,mouseX,mouseY,12);
+                    drawDot(ctx,mouseX,mouseY,5);
                 }
             }
         
@@ -373,7 +383,91 @@
                     canvas.addEventListener('touchmove', sketchpad_touchMove, false);
                 }
             }
+ 
+ 
+ 
+ 
+ 
+ 
+ // Some smoothing ideashttp://perfectionkills.com/exploring-canvas-drawing-techniques
+
+                function midPointBtw(p1, p2) {
+                return {
+                    x: p1.x + (p2.x - p1.x) / 2,
+                    y: p1.y + (p2.y - p1.y) / 2
+                };
+                }
+
+                var el = document.getElementById('c');
+                var ctx = el.getContext('2d');
+
+                ctx.lineWidth = 10;
+                ctx.lineJoin = ctx.lineCap = 'round';
+
+                var isDrawing, points = [ ];
+
+                el.onmousedown = function(e) {
+                isDrawing = true;
+                points.push({ x: e.clientX, y: e.clientY });
+                };
+
+                el.onmousemove = function(e) {
+                if (!isDrawing) return;
+                
+                points.push({ x: e.clientX, y: e.clientY });
+
+                ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+                
+                var p1 = points[0];
+                var p2 = points[1];
+                
+                ctx.beginPath();
+                ctx.moveTo(p1.x, p1.y);
+                console.log(points);
+
+                for (var i = 1, len = points.length; i < len; i++) {
+                    // we pick the point between pi+1 & pi+2 as the
+                    // end point and p1 as our control point
+                    var midPoint = midPointBtw(p1, p2);
+                    ctx.quadraticCurveTo(p1.x, p1.y, midPoint.x, midPoint.y);
+                    p1 = points[i];
+                    p2 = points[i+1];
+                }
+                // Draw last line as a straight line while
+                // we wait for the next point to be able to calculate
+                // the bezier control point
+                ctx.lineTo(p1.x, p1.y);
+                ctx.stroke();
+                };
+
+                el.onmouseup = function() {
+                isDrawing = false;
+                points.length = 0;
+                };
+                
+
+   //ways to save signature as png or jpg//
+    var savePNGButton = wrapper.querySelector("[data-action=save-png]");
+    var saveJPGButton = wrapper.querySelector("[data-action=save-jpg]");
+                 savePNGButton.addEventListener("click", function (event) {
+                if (signaturePad.isEmpty()) {
+                    alert("Please provide a signature first.");
+                } else {
+                    var dataURL = signaturePad.toDataURL();
+                    download(dataURL, "signature.png");
+                }
+                });
+
+                saveJPGButton.addEventListener("click", function (event) {
+                if (signaturePad.isEmpty()) {
+                    alert("Please provide a signature first.");
+                } else {
+                    var dataURL = signaturePad.toDataURL("image/jpeg");
+                    download(dataURL, "signature.jpg");
+                }
+                });
         </script>
+    -->
         
     </body>
 </html>
